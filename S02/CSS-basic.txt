@@ -1,0 +1,33 @@
+-Có 3 cách dùng CSS trong html
+-internal tạo 1 file nằm trong cặp thẻ <style></style> trong html
+
+-external tạo 1 file css ở bên ngoài và truyền vào  
+
+-inline thay đổi ngay trong dòng bằng thuộc tính style="color:,..."
+-ul sửa thành ol thì dấu chấm đầu hàng sẽ trở thành số thứ tự
+-CSS selectors là các thuộc tính định danh(ID và class) đê gọi các phần thử html
+select id thì dùng dấu # và select class thì dùng dấu "."
+*So sánh độ ưu tiên trong css
+-Inter và Exter : không có ưu tiên , cái nào gọi sau thì theo cái đó  
+-Inline:1000
+-#id:100
+-.class:10
+-tag:1
+cái nào nhiều điểm hơn thì ưu tiên
+-Equal specifity:cái nào sau thì được ưu tiên vì cùng cấp
+-Có thể cộng điểm
+-Universal selector:là dùng dấu * cho tất cả
+-inherited:thừa kế, lớp con thừa hưởng lớp cha 
+-!important là mạnh nhất,hơn Inline, có thể lồng vào các thuộc tính để thêm ưu tiên
+*CSS variables
+Tác dụng: để có thể thay đổi đồng bộ các thuộc tính có màu giống nhau 
+nếu khai báo global thì dung được cả
+còn local thì chỉ dùng được trong thẻ
+**Units
+ 1.Absolute Units
+ -px:đơn vị cố định
+ 2.Relative Units
+ -%:phụ thuộc vào thẻ chứa nó
+ -rem:theo thẻ html
+ -em:theo thẻ chứa nó gần nhất có chứa font-size
+ -vw,vh:chỉ phụ thuộc vào kích thước trình duyệt người xem nhìn

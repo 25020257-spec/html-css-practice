@@ -1,0 +1,19 @@
+h1 {
+    color: rgb(0, 255, 179) !important
+}
+
+#hello {
+    color: var(--my-color)
+}
+
+.gutboi {
+    color: var(--my-color)
+}
+
+ol {
+    color: bisque
+}
+
+:root {
+    --my-color: red;
+}
