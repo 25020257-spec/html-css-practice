@@ -1,0 +1,18 @@
+Thuộc tính
+-Padding: là đệm thêm vào 
+cú pháp ngắn: padding : trên phải dưới trái(theo chiều kim đồng hồ)
+-Border: là lớp bao bọc ở ngoài của element và padding nữa
+solid: nét lièn ,dasher:nét đứt, là viền
+//đều làm cho kích thức của box tăng lên 
+-margin:đẩy khối ra , tạo kcasch mà k làm kich thuoc khối tăng lên
+
+**Box-sizing:để tự cân đối kích thước nằm trong khoảng cho phép,:border-box
+
+**Display:là thuộc tính CSS quyết định một phần tử hiển thị và xếp chỗ như thế nào trên trang. Nó là một trong những thuộc tính quan trọng nhất, vì mọi bố cục (flexbox, grid) đều bắt đầu từ nó.
+-block: chiếm nguyên cả hàng, phần tử sau xuống dòng. Có thể đặt width, height, margin, padding thoải mái.
+
+Mặc định của: div, p, h1-h6, ul, section, header, footer...
+-inline: nằm cùng dòng với chữ, chỉ rộng bằng nội dung. Không đặt được width, height, và margin trên/dưới không có tác dụng.
+
+Mặc định của: span, a, strong, em...
+-3. inline-block: nằm cùng dòng như inline nhưng vẫn đặt được width, height, margin như block. Hay dùng cho nút bấm, thẻ nhỏ.

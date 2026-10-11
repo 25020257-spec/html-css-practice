@@ -1,0 +1,9 @@
+back-ground clip: điều chỉnh backgroundd-color đổ từ đâu vào ví dụ : nếu là border box thì nó đổ từ border về
+còn nếu là paddding-box thì nó đổ từ padding , phần background của border-box mất màu
+background-image:là ảnh nền cho trang-cú pháp background-image:url(),
+có linear-gradient():là chuyển màu liên tiếp;
+rgba(): a là độ trong suốt để có thể nhìn xuyên
+
+background-size:100%; chỉnh size
+background-repeat:do cái này có tính repeat ảnh nên khi k muốn thì minh có thể norepeat; ứng dụng là từ 1 ảnh nhỏ có thể tạo ra cả 1 background có hiệu ứng như thế
+
