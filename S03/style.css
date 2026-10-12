@@ -3,22 +3,29 @@
      width: 100%;
      display: block;
      margin: 0 auto;
+     object-fit: cover;
  }
 
  .products {
+
+
      display: flex;
-     justify-content: space-between;
-     gap: 10px;
+     flex-wrap: wrap;
+     justify-content: center;
+     gap: 20px;
  }
 
- .card ul {
-     height: 92px;
- }
+
 
  .card {
 
-     width: 300px;
-     margin: 40px auto;
+     display: flex;
+     flex-direction: column;
+
+     width: 100%;
+     max-width: 300px;
+
+     margin: 40px 0;
      padding: 16px;
      box-sizing: border-box;
      border-radius: 10px;
@@ -35,18 +42,6 @@
      border-radius: 10px;
  }
 
- .card h2 {
-     height: 60px
- }
-
- .card p {
-     height: 80px;
- }
-
- .card div {
-     height: 35px;
-
- }
 
 
 
@@ -70,6 +65,14 @@
      font-weight: bold;
      font-size: 24px;
 
+ }
+
+ .btn-box {
+     margin-top: auto
+ }
+
+ .badge-box {
+     height: 35px;
  }
 
  .btn {
