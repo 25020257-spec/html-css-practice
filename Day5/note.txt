@@ -1,0 +1,11 @@
+Thẻ <article>
+Có ngữ nghĩa. Đại diện cho một nội dung độc lập, tự đóng gói và có thể tái sử dụng.
+Nội dung bên trong có thể tách rời ra khỏi trang web mà vẫn giữ nguyên ý nghĩa (như một bài báo cắt ra).
+Có. Giúp công cụ tìm kiếm (Google) và trình đọc màn hình hiểu rõ cấu trúc bài viết.
+Bài viết blog, bài báo, bài đăng forum, bình luận, thẻ sản phẩm (product card).
+
+Thẻ <div>
+Không có ngữ nghĩa. Chỉ là một hộp chứa trống rỗng để gom nhóm hoặc định dạng CSS.
+Phụ thuộc hoàn toàn vào ngữ cảnh xung quanh, không thể đứng độc lập.
+Không. Trình duyệt và Google xem nó như một khối nội dung chung chung.
+Chia bố cục, làm box để CSS (bo góc, đổ màu), bọc các phần tử để căn chỉnh layout.

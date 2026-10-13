@@ -1,0 +1,17 @@
+.boxCha {
+    height: 100vh;
+    display: flex;
+    background-color: aqua;
+    justify-content: center;
+
+    align-items: center;
+
+}
+
+.box {
+
+    height: 200px;
+    width: 200px;
+    color: aqua;
+    background-color: red;
+}
