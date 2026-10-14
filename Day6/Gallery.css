@@ -1,0 +1,11 @@
+.Grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1px;
+}
+
+.Grid img {
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
