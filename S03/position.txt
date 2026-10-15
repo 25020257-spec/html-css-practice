@@ -1,0 +1,5 @@
+position có 4 giá trị chính, kèm top, right, bottom, left, z-index.
+relative	vẫn ở chỗ cũ, nhưng có thể dịch đi bằng top/left...; làm “mốc” cho con absolute
+absolute	rời khỏi dòng chảy bình thường, đặt theo cha gần nhất có position
+fixed	dính vào cửa sổ trình duyệt, cuộn trang không đổi chỗ
+sticky	cuộn bình thường, tới ngưỡng thì dính lại
