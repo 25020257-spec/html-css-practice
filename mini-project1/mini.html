@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trang sản phẩm</title>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <nav><img src="image/logo.jpg">
+        <h1>Studio</h1>
+    </nav>
+    <section class="products"></section>
+    <button class="btnMove">↑</button>
+    <div class="filtersAndsort">
+        <input id="search" placeholder="Tìm sản phẩm...">
+        <div class="filters">
+            <button data-filter="all" class="filter-btn active">Tất cả</button>
+            <button data-filter="sale" class="filter-btn">Có giảm giá</button>
+            <button data-filter="instock" class="filter-btn">Còn hàng</button>
+        </div>
+
+        <select id="sort">
+            <option Value="default">Mặc định</option>
+            <option Value="price-asc">Giá tăng dần</option>
+            <option Value="price-desc">Giá giảm dần</option>
+            <option Value="rating">Đánh giá cao nhất</option>
+        </select>
+    </div>
+    <section class="cart">
+        <h2>Giỏ hàng</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Sản phẩm</th>
+                    <th>Số lượng</th>
+                    <th>thành tiền</th>
+                </tr>
+
+            </thead>
+            <tbody class="cartBody">
+            </tbody>
+            <div class="totalCart">Tổng tiền</div>
+            <div class="totalQuantity"></div>
+        </table>
+    </section>
+    <div class="total"></div>
+    <script src="mini.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,5 @@
+//Quy tắc cấu trúc code
+-Quy tắc: tên đọc lên là hiểu nó chứa gì, không cần xem code xung quanh.
+-Chia ra các phần và có ghi chú thích rõ ràng.
+-Trong Css sử dụng các biến để thay thế các giá trị giúp bảo trì tốt hơn.
+Dữ liệu gốc (products) chỉ đọc, còn dữ liệu thay đổi (cart) là bản riêng. Đây cũng là lý do sort bạn dùng [...products] chứ không sort thẳng products.

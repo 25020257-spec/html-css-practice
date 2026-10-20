@@ -1,0 +1,283 @@
+ :root {
+     --color-primary: orange;
+     --color-price: red;
+     --color-nav: #0b0a0a;
+     --color-badge: #a18f8f;
+     --color-primary-dark: rgb(130, 88, 25);
+     --color-accent: #00ffff;
+     --radius: 10px;
+ }
+
+ .card img {
+     height: 300px;
+     width: 100%;
+     display: block;
+     margin: 0 auto;
+     object-fit: cover;
+ }
+
+ .filtersAndsort {
+     display: flex;
+     justify-content: center;
+
+
+ }
+
+ .products {
+
+
+     display: flex;
+     flex-wrap: wrap;
+
+     gap: 1rem;
+ }
+
+
+
+ .card {
+     transition: transform 0.2s, box-shadow 0.2s;
+     position: relative;
+     display: flex;
+     flex-direction: column;
+
+     width: 100%;
+     max-width: none;
+
+     margin: 40px 0;
+     padding: 16px;
+     box-sizing: border-box;
+     border-radius: var(--radius);
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+ }
+
+ .card:hover {
+
+     transform: translateY(-4px);
+     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+ }
+
+
+
+ .badge {
+     position: absolute;
+     top: 50px;
+
+     display: inline-block;
+     background-color: var(--color-badge);
+     color: rgb(83, 38, 38);
+
+     padding: 4px 10px;
+     font-size: 14px;
+     border-radius: var(--radius);
+ }
+
+
+
+
+ .price {
+
+     margin: 12px 0;
+
+ }
+
+ .old-price {
+     display: inline-block;
+
+     color: gray;
+     text-decoration: line-through;
+     margin-right: 8px;
+     font-size: 16px;
+ }
+
+ .new-price {
+     color: var(--color-price);
+     font-weight: bold;
+     font-size: 24px;
+
+ }
+
+ .btn-box {
+     margin-top: auto
+ }
+
+
+
+ .btn {
+
+     border-radius: var(--radius);
+     padding: 10px;
+     border: 1px solid var(--color-primary);
+     background-color: var(--color-primary);
+     color: aliceblue;
+     cursor: pointer;
+     transition: background-color 0.2s;
+ }
+
+ .btn:hover {
+     background-color: var(--color-primary-dark);
+
+ }
+
+ .filter-btn {
+     background-color: var(--color-price)
+ }
+
+ .filter-btn:hover {
+     background-color: antiquewhite;
+     cursor: pointer;
+ }
+
+ .filter-btn.active {
+     background-color: blueviolet;
+ }
+
+ #sort:focus {
+     background-color: burlywood;
+ }
+
+ .btn:active {
+
+     box-shadow: 2px 2px 5px coral;
+ }
+
+ .total {
+     width: 200px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+     border-radius: var(--radius);
+     background-color: yellow;
+     position: fixed;
+     bottom: 0;
+
+ }
+
+
+
+ nav img {
+     width: 100px;
+     height: 100px;
+     object-fit: cover;
+ }
+
+ body nav {
+
+     z-index: 100;
+     position: sticky;
+     top: 0;
+     color: white;
+     background-color: var(--color-nav);
+     align-items: center;
+     display: flex;
+     justify-content: flex-start;
+
+ }
+
+ h1,
+ h2 {
+     font-size: 1.5rem;
+ }
+
+ .btnMove {
+     position: fixed;
+     bottom: 0;
+     right: 20px;
+     border-radius: 50px;
+     width: 50px;
+     height: 50px;
+     cursor: pointer;
+     background-color: var(--color-accent);
+     font-size: 24px;
+     border: none;
+
+ }
+
+ table {
+     width: 100%;
+     border-collapse: collapse;
+     /* Gộp các đường viền lại với nhau */
+ }
+
+ table,
+ th,
+ td {
+     border: 1px solid #dddddd;
+ }
+
+ th,
+ td {
+     padding: 10px;
+ }
+
+ th {
+     background-color: #f2f2f2;
+ }
+
+ @media (max-width: 600px) {
+     html {
+         font-size: 12px;
+     }
+
+     .new-price {
+         font-size: 15px;
+     }
+
+     .old-price {
+         font-size: 12px;
+     }
+
+
+
+     .card {
+         max-width: none;
+         width: 100%;
+         padding: 5px;
+     }
+
+     nav img {
+         width: 3rem;
+         height: 3rem;
+     }
+
+     .btn {
+         padding: 0px;
+     }
+
+     .total {
+         text-align: center;
+         width: 120px;
+         background: white;
+         padding: 0.75rem;
+     }
+
+     .btnMove {
+
+         width: 40px;
+         height: 40px;
+         padding: 0;
+         background-color: rgba(0, 0, 0, 0.6);
+     }
+
+ }
+
+ @media (min-width: 601px) {
+     .card {
+         width: calc((100% - 1rem) / 2);
+     }
+
+     /* 2 cột */
+ }
+
+ @media (min-width: 1000px) {
+     .card {
+         width: calc((100% - 2rem) / 3);
+     }
+
+     /* 3 cột */
+ }
+
+ @media (min-width: 1300px) {
+     .card {
+         width: calc((100% - 3rem) / 4);
+     }
+
+     /* 4 cột */
+ }

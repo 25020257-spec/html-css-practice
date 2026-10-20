@@ -1,0 +1,70 @@
+array.push trả về tổng số sản phẩm chứ không trả về phần tử đấy nên lưu ý khi gán giá trị này.
+Kiến thức some,every,find:
+-some:trả về True/False nếu tồn tại 1 hc nhiều object thỏa mãn điều kiện.
+-every:trả về True/False nếu tất cả thỏa mãn điều kiện.
+-find:tìm 1 object thoả mãn điều kiện và trả về phàn tử đầu tiên tìm thấy
+event.target.value	giá trị đang chọn
+event.target.id	id của thẻ ("sort")
+event.target.className	class của thẻ
+event.target.textContent	chữ bên trong
+getAttribute("value1")
+Ba chuyện cần nhớ cho đỡ rối:
+
+.value luôn trả về một chuỗi, không bao giờ trả về hai thứ cùng lúc.
+.value chỉ đọc đúng thuộc tính tên value.
+Với <select>, event.target là thẻ <select>, nên .value là value của option đang chọn, không phải của tất cả option.
+querySelectorAll trả về danh sách các phần tử, mà danh sách thì không có addEventListener, Console sẽ báo Sorts.addEventListener is not a function. #sort chỉ có một phần tử nên dùng querySelector:
+	Nơi viết	Phân biệt hoa thường?
+Thuộc tính trong thẻ HTML (Value="...")	file HTML	Không
+Thuộc tính của đối tượng trong JS (event.target.value)	file JS	Có
+
+Trình duyệt đọc HTML của bạn, nhận ra Value là value, rồi lưu vào đối tượng JS dưới tên viết thường value. Nên HTML để hoa vẫn chạy, nhưng JS bắt buộc gõ value thường.
+**
+filter trả về mảng mới, không sửa list. Bạn gọi mà không gán lại, nên kết quả bị vứt đi, nút lọc không có tác dụng. Khác với sort (sort đổi thẳng mảng), filter phải gán:
+
+textContent: đọc hoặc thay chữ bên trong một thẻ
+textContent là thuộc tính của phần tử, cho bạn lấy hoặc gán phần chữ nằm bên trong thẻ đó.
+-gán tất cả dưới dạng văn bản kể cả thể html , có phòng XSS.
+textContent	innerHTML
+Chuỗi gán vào được hiểu là	chữ thuần	mã HTML
+"<b>Hi</b>"	hiện nguyên chữ <b>Hi</b>	hiện chữ Hi in đậm
+Dùng khi	chỉ cần đổi chữ	cần dựng cả thẻ (như card)
+An toàn hơn?	Có	Cần cẩn thận
+//Quy tắc cấu trúc code
+Quy tắc: tên đọc lên là hiểu nó chứa gì, không cần xem code xung quanh.
+filter trả về mảng mới nên phải gán lại (list = list.filter(...)), còn sort đổi thẳng mảng gốc.
+Hàm so sánh của sort trả về số, không phải true/false.
+querySelector cho một phần tử, querySelectorAll cho danh sách; selector và tên class phải khớp từng chữ.
+Trạng thái nằm trong biến, mọi thao tác chỉ đổi biến rồi gọi một hàm update().
+
+
+//Pseudo-class (lớp giả) trong CSS là một từ khóa được thêm vào sau bộ chọn (selector) để định dạng một phần tử khi nó ở một trạng thái đặc biệt.
+:hover:change the background:color of button
+-The :hover CSS pseudo-class matches an element when a user interacts with it using a pointing device.
+-The pseudo-class is generally triggered when the user moves the cursor (mouse pointer) over an element without pressing the mouse button.
+The :focus CSS pseudo-class represents an element (such as a form input) that has received focus.
+-It is generally triggered when the user clicks or taps on an element or selects it with the keyboard's Tab key.
+The :active CSS pseudo-class represents an element (such as a button) that is being activated by the user.
+-When using a mouse, "activation" typically starts when the user presses down the primary mouse button.
+//Thuộc tính nào dùng nhiều thì để tên biến 
+B1:Tên biến bắt buộc bắt đầu bằng hai dấu gạch ngang --. Đặt trong :root (đại diện cho thẻ <html>, nên mọi phần tử đều dùng được):
+Bước 2: Sử dụng. Gọi bằng var(--tên):
+***Không chỉ dùng cho màu. Biến chứa được mọi giá trị CSS: khoảng cách, bo góc, cỡ chữ:
+//card:hover
+transform dùng để biến đổi hình dạng/vị trí của phần tử (dịch chuyển, xoay, phóng to...) mà không làm ảnh hưởng đến bố cục của các phần tử xung quanh.
+
+translateY(-4px) nghĩa là dịch phần tử theo trục Y (chiều dọc):
+
+Giá trị âm (-4px) → dịch lên trên 4px
+Giá trị dương (4px) → dịch xuống dưới 4px
+
+Tương tự có translateX() cho chiều ngang (dương = sang phải, âm = sang trái).
+Transition là để chỉnh thời gian thực hiện các hiệu ứng như chuyển màu, thay đổi trang thái trong 1 khoảng thời gian nào đấy 1 cách mượt mà.
+-Bạn muốn nút lọc vẫn sáng lên sau khi đã bấm xong để biết đang chọn kiểu lọc nào. :active chỉ tồn tại lúc đang nhấn, thả chuột là mất, nên không làm được.
+-Phải dùng class .active và tự gắn/gỡ bằng JS.
+	         :active	                                                          .active
+Loại	    pseudo-class (trạng thái có sẵn của trình duyệt)	                class do bạn tự đặt tên
+Ai bật nó	Trình duyệt, tự động	                                            Bạn, bằng HTML hoặc JS (classList.add)
+Khi nào có  hiệu lực Chỉ trong lúc đang nhấn giữ chuột (hoặc chạm) lên phần tử	Cho tới khi bạn gỡ class đi
+Trong HTML	không viết gì
+colspan là gộp 4 cột liên tiếp thành 1 cột	                                                    class="filter-btn active"

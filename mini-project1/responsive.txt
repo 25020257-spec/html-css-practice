@@ -1,0 +1,18 @@
+cú pháp:<meta name="viewport" content="width=device-width, initial-scale=1.0">
+@media (max-width: 600px) {
+  /* các quy tắc chỉ áp dụng khi cửa sổ rộng tối đa 600px */
+}
+là thích ứng khi width nó thay đổi .
+Thẻ <meta> dùng chung cho nhiều loại thông tin về trang, nên cần name để nói “thông tin này thuộc loại nào”. Còn content là giá trị của loại đó.
+name="viewport": “đây là cài đặt về vùng hiển thị trang”. Trình duyệt điện thoại đọc nó.
+name="description": “đây là mô tả trang” (Google dùng để hiện dưới tiêu đề kết quả tìm kiếm).
+Đổi name thì trình duyệt hiểu content theo nghĩa khác, nên viết sai (ví dụ name="viewpoint") là điện thoại bỏ qua luôn.
+initial-scale là gì
+
+Bạn hiểu đúng: nó là tỉ lệ phóng to/thu nhỏ lúc trang vừa mở ra.
+
+Giá trị	Ý nghĩa
+1.0	hiển thị 100%, không phóng, không thu
+0.5	trang vừa mở đã thu nhỏ còn một nửa
+2.0	trang vừa mở đã phóng to gấp đôi
+width=device-width: bảo trình duyệt điện thoại dùng đúng chiều rộng thật của màn hình làm “chiều rộng trang” (thay vì giả vờ rộng ~980px rồi thu nhỏ lại).
