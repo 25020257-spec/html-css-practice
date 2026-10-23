@@ -1,0 +1,4 @@
+Điều cần nhớ
+Chạy (được trình duyệt nạp) và trao đổi dữ liệu (import/export) là hai chuyện khác nhau.
+File được import thì tự chạy theo. File không ai nạp thì nằm im.
+Mỗi file chỉ nên được nạp một đường, nếu không sẽ chạy hai lần như lỗi số lượng nhảy của bạn.

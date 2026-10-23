@@ -1,0 +1,150 @@
+:root {
+    --gap: 10px;
+    --radius: 10px;
+    --vintage-cream: #f4ebd0;
+    /* Màu kem nền giấy cũ */
+    --vintage-yellow: #d6ad60;
+    /* Vàng mù tạt/vàng úa */
+    --vintage-gold: #b68d40;
+    /* Vàng đậm hoài cổ */
+    --vintage-charcoal: #122620;
+    /* Xanh đen than củi (thay cho màu đen thuần) */
+    --header-height: 100px;
+}
+
+header {
+    position: sticky;
+    z-index: 999;
+    top: 0;
+    background-color: var(--vintage-yellow);
+}
+
+nav {
+    height: var(--header-height);
+}
+
+body {
+    margin: 0;
+
+}
+
+.hero {
+    display: flex;
+    background-color: var(--vintage-cream);
+    height: 100%;
+    width: 100%;
+}
+
+.hero h1 {
+    padding: 10px;
+    font-family: "Georgia", "Times New Roman", serif;
+    font-size: 100px;
+}
+
+.hero p {
+    padding: 20px;
+}
+
+.hero img {
+    width: 650px;
+    height: 650px;
+    padding: 0;
+}
+
+.products {
+    background-color: var(--vintage-cream);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.card {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    box-sizing: border-box;
+    border-radius: var(--radius);
+    width: 100%;
+    max-width: 300px;
+    align-items: center;
+    color: rgb(160, 172, 160);
+    background-color: var(--vintage-charcoal);
+}
+
+
+img {
+
+    padding: 10px;
+    padding-bottom: 0;
+    width: 280px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.badge {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    box-sizing: border-box;
+    background-color: var(--vintage-yellow);
+    border-radius: var(--radius);
+    font-size: 17px;
+    color: darkolivegreen;
+}
+
+.addBtn {
+    padding: 8px;
+    border-radius: var(--radius);
+
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: darkolivegreen;
+    margin: 0 10px;
+
+}
+
+.new-price {
+    color: #248668;
+    font-size: 20px;
+}
+
+.price {
+    margin: 10px;
+}
+
+
+
+
+@media (max-width: 400px) {
+    :root {
+        font-size: 16px;
+    }
+
+    header {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 50px;
+        height: 100%;
+
+    }
+
+    body {
+        padding-left: 50px;
+    }
+
+    .products {
+        display: flex;
+        flex-direction: column;
+    }
+
+    th {
+        font-size: 16px;
+    }
+
+}
