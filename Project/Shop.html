@@ -16,6 +16,7 @@
     </header>
     <main>
         <section class="hero">
+            <img src="image/tiem-cu-ki.jpg">
             <div>
                 <h1>Tiệm Cũ Kĩ</h1>
                 <p>Tiệm quần áo cũ nằm lặng lẽ ở một góc phố nhỏ, khoác lên mình tấm biển hiệu gỗ đã bong tróc màu sơn
@@ -23,11 +24,24 @@
                     nét chữ mờ theo năm tháng. Bên trong căn gác ngập mùi thơm của vải vóc lâu ngày và hơi ẩm thời gian,
                     từng dãy áo dài treo sát nhau, lặng lẽ kể câu chuyện riêng từ những thập kỷ cũ.</p>
             </div>
-            <img src="image/tiem-cu-ki.jpg">
+
         </section>
         <section class="products"></section>
     </main>
     <footer>
+        <div class="filters">
+            <button data-filter="all" class="filter-btn">Tất cả</button>
+            <button data-filter="sale" class="filter-btn">Có giảm giá</button>
+            <button data-filter="inStock" class="filter-btn">Còn hàng</button>
+        </div>
+        <select class="sorts">
+            <option value="Basic">Mặc định</option>
+            <option value="IncreasePrice">Giá tăng dần</option>
+            <option value="DecreasePrice">Giá giảm dần</option>
+            <option value="Top">Xếp hạng đánh giá</option>
+
+        </select>
+        <input id="search" placeholder="Tìm sản phẩm...">
         <table class="Cart">
             <thead>
                 <tr>
@@ -36,6 +50,8 @@
                     <th>Thành tiền</th>
                 </tr>
             </thead>
+            <tbody class="CartBody">
+            </tbody>
         </table>
     </footer>
     <script type="module" src="main.js"></script>
