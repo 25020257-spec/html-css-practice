@@ -1,5 +1,6 @@
 import { products } from "./Data.js";
 import { finalPrice, formatPrice } from "./Utils.js";
+import { CartFunction, renderCart } from "./Cart.js";
 let cart = JSON.parse(localStorage.getItem("cart")) || []
 //sinh web
 function renderCard(list) {
@@ -30,9 +31,13 @@ productSearch.addEventListener("input", (event) => {
     update()
 })
 //Lọc
+const filterButtons = document.querySelectorAll(".filter-btn")
 document.querySelectorAll(".filter-btn").forEach((button) => {
     button.addEventListener("click", () => {
         currentFilter = button.dataset.filter
+
+        filterButtons.forEach((b) => b.classList.remove("active"));
+        button.classList.add("active");
         update()
 
     })
@@ -64,65 +69,11 @@ function update() {
     }
     //tìm kiếm
     list = list.filter((product) => { return product.name.toLowerCase().includes(currentSearch.toLowerCase()) })
-    renderCard(list)
-}
-//Thêm
-
-document.querySelector(".products").addEventListener("click", (event) => {
-    if (event.target.classList.contains("addBtn")) {
-        const name = event.target.dataset.name;
-        const product = products.find((product) => { return product.name === name; })
-        const existing = cart.find((product) => { return product.name === name; })
-        if (existing) { existing.quantity += 1; }
-        else {
-            cart.push({ ...product, quantity: 1 })
-        }
-        localStorage.setItem("cart", JSON.stringify(cart))
-        renderCart()
-    }
-})
-//Giảm
-document.querySelector(".CartBody").addEventListener("click", (event) => {
-    if (event.target.classList.contains("decrease-btn")) {
-        const name = event.target.dataset.name;
-        const removeProduct = cart.find((product) => { return product.name === name })
-        console.log(removeProduct)
-        if (removeProduct.quantity > 1) { removeProduct.quantity -= 1; }
-        else { cart = cart.filter((product) => { return product !== removeProduct }) }
-        localStorage.setItem("cart", JSON.stringify(cart))
-        renderCart()
-
-    }
-
-
-})
-//Xóa
-document.querySelector(".CartBody").addEventListener("click", (event) => {
-    if (event.target.classList.contains("removeBtn")) {
-        const name1 = event.target.dataset.name;
-        console.log(name1)
-        const removeProduct = cart.find((product) => { return product.name === name1 })
-        console.log(removeProduct)
-        cart = cart.filter((product) => { return product !== removeProduct })
-        localStorage.setItem("cart", JSON.stringify(cart))
-        renderCart()
-    }
-
-})
-
-function renderCart() {
-    const html = cart.map((product) => {
-        return `<tr>
-            <td>${product.name}</td>
-            <td>${product.quantity}</td>
-            <td>${formatPrice(product.quantity * finalPrice(product))}</td>
-            <td><button class="decrease-btn" data-name="${product.name}">-</button></td>
-            <td><button class="removeBtn" data-name="${product.name}">Xóa</button></td>
-            </tr>
-            `
-    }).join("")
-    document.querySelector(".CartBody").innerHTML = html
+    renderCard(list);
+    //total
 
 }
+
 update()
-renderCart()
+renderCart(cart)
+CartFunction(cart)
